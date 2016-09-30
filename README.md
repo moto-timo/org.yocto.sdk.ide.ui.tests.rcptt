@@ -13,7 +13,7 @@ docker run --rm -t -v /home/$USER/rcpttWorkspace/org.yocto.sdk.ide.ui.tests.rcpt
 --project=/org.yocto.sdk.ide.ui.tests.rcptt
 ```
 
-[Yocto Project plugins]: https://git.yoctoproject.org/eclipse-poky "Yocto Project plugins"
+[Yocto Project plugins]: http://git.yoctoproject.org/cgit/cgit.cgi/eclipse-poky/ "Yocto Project plugins"
 [Eclipse]: http:/eclipse.org/ "Eclipse"
 [RCPTT]: http://eclipse.org/rcptt "RCPTT"
 [RCPTT IDE]: https://eclipse.org/rcptt/download "RCPTT IDE'
