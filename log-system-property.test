@@ -6,14 +6,22 @@ Element-Version: 3.0
 External-Reference: 
 Id: _vYvRgIXEEea-iMKZS_s_7Q
 Runtime-Version: 2.1.0.201606221726
-Save-Time: 9/28/16 2:46 PM
+Save-Time: 9/29/16 10:35 AM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
 
-// write property value of "myname" to AUT workspace log
-// passed in on command line as -Dmyname=yourname for instance
-log [substitute-variables "${system_property:myname}"]
+// write to log property value of osgi.requiredJavaVersion which is always
+// in the command line from RCPTT to AUT
+log [substitute-variables "${system_property:osgi.requiredJavaVersion}"]
+
+// write property value of "my.name" to AUT workspace log
+// passed in on command line as -autArgs -Dmy.name=yourname for instance
+log [substitute-variables "${system_property:my.name=myvalue}"]
+
+// Use the lower level Java VM properties to get the same value
+log [get-java-property "my.name"]
+
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
